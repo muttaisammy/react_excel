@@ -24,7 +24,7 @@ const HomeComponent = () => {
 
     const handleExport = () => {
         const headings = [[
-            'County',
+            'Program',
             'Facility',
             'Assessment_Date',
             'Assessment_Lead',
@@ -38,7 +38,7 @@ const HomeComponent = () => {
         utils.sheet_add_aoa(ws, headings);
         utils.sheet_add_json(ws, scores, { origin: 'A2', skipHeader: true });
         utils.book_append_sheet(wb, ws, 'Report');
-        writeFile(wb, 'movies.xlsx');
+        writeFile(wb, 'Movie Report.xlsx');
     }
 
     return (
@@ -68,7 +68,7 @@ const HomeComponent = () => {
                     <table className="table">
                         <thead>
                             <tr>
-                                <th scope="col">County</th>
+                                <th scope="col">Program</th>
                                 <th scope="col">Facility</th>
                                 <th scope="col">Assessment_Date</th>
                                 <th scope="col">Assessment_Lead</th>
