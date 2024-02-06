@@ -38,7 +38,7 @@ const HomeComponent = () => {
         utils.sheet_add_aoa(ws, headings);
         utils.sheet_add_json(ws, scores, { origin: 'A2', skipHeader: true });
         utils.book_append_sheet(wb, ws, 'Report');
-        writeFile(wb, 'Movie Report.xlsx');
+        writeFile(wb, 'Excel_Dashboard.xlsx');
     }
 
     return (
